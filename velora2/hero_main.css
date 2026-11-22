@@ -1,0 +1,52 @@
+.hero-wrapper{
+    background-image:url("images/fon.jpg");
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #E6C587;
+    color: #0B0C0E;
+}
+
+.btn-primary:hover {
+    background-color: #d4b476;
+    transform: translateY(-2px);
+}
+
+.btn-arrow {
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+
+.btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+    border-color: #E6C587;
+    color: #E6C587;
+    transform: translateY(-2px);
+}

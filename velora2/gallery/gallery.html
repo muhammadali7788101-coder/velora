@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея — VELORA Restaurant</title>
+    <meta name="description" content="Фотогалерея ресторана VELORA: интерьер, блюда и команда.">
+    
+    <!-- 1. Подключение шрифтов, иконок и стилей -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+    <link rel="stylesheet" href="../global_style/global.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+
+    <!-- 2. Шапка сайта и навигация -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="header-logo">
+                <i class="fa-solid fa-wine-glass logo-icon"></i>
+                <div class="logo-text">
+                    <span class="logo-title">VELORA</span>
+                    <span class="logo-subtitle">RESTAURANT</span>
+                </div>
+            </a>
+
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Главная</a></li>
+                    <li><a href="../menu/menu.html" class="nav-link">Меню</a></li>
+                    <li><a href="../about_us/about_us.html" class="nav-link">О нас</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Галерея</a></li>
+                    <li><a href="../contacts/contacts.html" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <a href="../reserve/reserve.html" class="btn-book">
+                    <span>Забронировать стол</span>
+                    <i class="fa-regular fa-calendar-check book-icon"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Hero-баннер галереи -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-container">
+            <span class="gallery-label">ГАЛЕРЕЯ</span>
+            <h1 class="gallery-hero-title">Атмосфера,<br>вдохновляющая<br>на большее</h1>
+            <p class="gallery-hero-desc">
+                В каждом кадре — не просто еда, а эмоции.<br>
+                Посмотрите, как выглядит Velora: в деталях, в моментах, в людях.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. Основной контент галереи -->
+    <section class="gallery-section">
+        <div class="gallery-container">
+            
+            
+            <div class="gallery-filter-tabs">
+                <button class="gallery-tab active" data-filter="all">Все фото</button>
+                <button class="gallery-tab" data-filter="interior"><i class="fa-regular fa-building"></i> Интерьер</button>
+                <button class="gallery-tab" data-filter="dishes"><i class="fa-solid fa-utensils"></i> Блюда</button>
+                <button class="gallery-tab" data-filter="team"><i class="fa-solid fa-user-group"></i> Команда</button>
+            </div>
+
+            <!-- 5. Фильтры и сетка фотографий -->
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="../images/fon.jpg" alt="Интерьер"></div>
+                <div class="gallery-item"><img src="../images/catalog_images/steik.jpg" alt="Стейк"></div>
+                <div class="gallery-item"><img src="../images/catalog_images/chokolate_fondan.jpg" alt="Десерт"></div>
+                <div class="gallery-item"><img src="../images/catalog_images/pasta.jpg" alt="Паста"></div>
+                <div class="gallery-item"><img src="../images/catalog_images/cezar.jpg" alt="Салат"></div>
+                <div class="gallery-item"><img src="../images/catalog_images/korpachao_cow.jpg" alt="Шеф"></div>
+                <div class="gallery-item"><img src="../images/catalog_images/beer.jpg" alt="Бар"></div>
+                <div class="gallery-item"><img src="../images/fon.jpg" alt="Зал"></div>
+                <div class="gallery-item"><img src="../images/catalog_images/capuchino.jpg" alt="Кофе"></div>
+                <div class="gallery-item"><img src="../images/catalog_images/krevetka.jpg" alt="Закуска"></div>
+                <div class="gallery-item"><img src="../images/catalog_images/panna_potta.jpg" alt="Панна-котта"></div>
+                <div class="gallery-item"><img src="../images/fon.jpg" alt="Столик"></div>
+            </div>
+
+            
+            <div class="gallery-pagination">
+                <button class="page-btn page-nav"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="page-btn">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn active">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">5</button>
+                <button class="page-btn page-nav"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. Пагинация -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-col footer-about">
+                    <h3 class="footer-logo">VELORA</h3>
+                    <p class="footer-desc">
+                        Изысканная кухня и атмосфера, созданная для ваших самых важных моментов.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="../menu/menu.html">Наше меню</a></li>
+                        <li><a href="../about_us/about_us.html">О нас</a></li>
+                        <li><a href="../contacts/contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Часы работы</h4>
+                    <ul class="footer-info">
+                        <li><span>Пн – Пт:</span> 12:00 – 23:00</li>
+                        <li><span>Сб – Вс:</span> 11:00 – 00:00</li>
+                        <li class="kitchen-note">Кухня работает до 22:30</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-info">
+                        <li><i class="fa-solid fa-location-dot info-icon"></i> пр. Исмоила Сомони, 12</li>
+                        <li><i class="fa-solid fa-phone info-icon"></i> +992 103-77-88-77</li>
+                        <li><i class="fa-solid fa-envelope info-icon"></i> info@velora.ru</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 VELORA. Все права защищены.</p>
+                <a href="../privacy.html" class="privacy-link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 7. Подвал и подключение скриптов -->
+    <script src="../js/config.js"></script>
+<script src="../js/site.js"></script>
+<script src="gallery.js"></script>
+</body>
+</html>

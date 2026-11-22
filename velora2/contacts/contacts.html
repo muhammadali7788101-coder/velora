@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Velora Restaurant</title>
+    <meta name="description" content="Контакты ресторана VELORA: адрес, телефон, карта и форма обратной связи.">
+    
+    <!-- 1. Подключение шрифтов, иконок и стилей -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 2. Шапка сайта и навигация -->
+    <link rel="stylesheet" href="../global_style/global.css">
+    <link rel="stylesheet" href="contacts.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+
+    
+  <header class="header">
+    <div class="header-container">
+        
+        <a href="../index.html" class="header-logo">
+            <i class="fa-solid fa-wine-glass logo-icon"></i>
+            <div class="logo-text">
+                <span class="logo-title">VELORA</span>
+                <span class="logo-subtitle">RESTAURANT</span>
+            </div>
+        </a>
+
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Главная</a></li>
+                <li><a href="../menu/menu.html" class="nav-link">Меню</a></li>
+                <li><a href="../about_us/about_us.html" class="nav-link">О нас</a></li>
+                <li><a href="../gallery/gallery.html" class="nav-link">Галерея</a></li>
+                <li><a href="contacts.html" class="nav-link active">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <a href="../reserve/reserve.html" class="btn-book">
+                <span>Забронировать стол</span>
+                <i class="fa-regular fa-calendar-check book-icon"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+    
+ <!-- 3. Hero-секция контактов -->
+<section class="contact-hero">
+    <div class="contact-hero-container">
+        <div class="contact-hero-content">
+            <span class="section-label">КОНТАКТЫ</span>
+            <h1 class="contact-hero-title">Свяжитесь<br>с нами</h1>
+            <p class="contact-hero-desc">
+                Мы всегда рады вашим вопросам, предложениям и бронированиям. Свяжитесь с нами — и мы поможем сделать ваш визит в Velora особенным.
+            </p>
+        </div>
+    </div>
+</section>
+
+    
+    <section class="contact-info">
+        <div class="contact-info-container">
+            
+            <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <h3 class="contact-info-title">Наш адрес</h3>
+                <p class="contact-info-text">ул. 50 лет СССР<br><span>(Хуҷанд 735700, Таджикистан)</span></p>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+                <h3 class="contact-info-title">Телефон</h3>
+                <p class="contact-info-text">+992 55 123 45 67<br><span>Ежедневно с 10:00 до 23:00</span></p>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="fa-regular fa-envelope"></i></div>
+                <h3 class="contact-info-title">Email</h3>
+                <p class="contact-info-text">info@velora.tj<br><span>Мы ответим в течение 1 часа</span></p>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="fa-regular fa-clock"></i></div>
+                <h3 class="contact-info-title">Режим работы</h3>
+                <p class="contact-info-text">Ежедневно<br><span>с 10:00 до 23:00</span></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Контактная информация -->
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            
+            
+            <div class="contact-form-block">
+                <span class="section-label">НАПИШИТЕ НАМ</span>
+                <h2 class="contact-form-title">Быстрая связь</h2>
+                <p class="contact-form-desc">Оставьте сообщение, и мы свяжемся с вами как можно скорее.</p>
+
+                <form class="contact-form">
+                    <div class="input-group">
+                        <i class="fa-regular fa-user input-icon"></i>
+                        <input type="text" name="customerName" aria-label="Ваше имя" placeholder="Ваше имя*" autocomplete="name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-phone input-icon"></i>
+                        <input type="tel" name="customerPhone" aria-label="Ваш телефон" placeholder="Ваш телефон*" autocomplete="tel" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope input-icon"></i>
+                        <input type="email" name="email" aria-label="Ваш email" placeholder="Ваш email" autocomplete="email">
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-regular fa-comment input-icon"></i>
+                        <textarea name="message" aria-label="Ваше сообщение" placeholder="Ваше сообщение*" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Отправить сообщение <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- 5. Форма быстрой связи и сопутствующее изображение -->
+            <div class="contact-quote-card">
+                <img src="../images/about_us/section1.jpg" alt="Атмосфера Velora" class="contact-quote-img">
+                <div class="contact-quote-overlay">
+                    <p class="contact-quote-text">«Мы ценим каждого гостя и всегда рады быть рядом»</p>
+                    <div class="contact-quote-logo">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                        <span>VELORA</span>
+                        <small>RESTAURANT</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+<section class="contact-map-section">
+    <div class="contact-map-container">
+        
+        
+        <div class="contact-map-info">
+            <span class="section-label">КАК НАС НАЙТИ</span>
+            <h2 class="contact-map-title">Удобное расположение</h2>
+            <p class="contact-map-desc">
+                Мы находимся в самом сердце города, в уютной и спокойной атмосфере, рядом с основными достопримечательностями и удобной транспортной развязкой.
+            </p>
+            <a href="https://yandex.ru/maps/-/CDuP5B~X" target="_blank" class="btn-route">
+                <i class="fa-solid fa-location-arrow"></i> Построить маршрут &rarr;
+            </a>
+        </div>
+
+        <!-- 6. Карта и мини-галерея -->
+        <div class="contact-map-wrapper">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24344.18539283752!2d69.57768741083983!3d40.297444399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b1b3a3bef36115%3A0xc3858223dc313f10!2z0J3QsNGB0LjQvNC4INCR0LDSs9C-0YA!5e0!3m2!1sru!2s!4v1793191638718!5m2!1sru!2s " 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+
+        
+        <div class="contact-map-gallery">
+            <img src="../images/about_us/gallery_1.jpg" alt="Фасад">
+            <img src="../images/about_us/gallery_2.jpg" alt="Вид">
+            <img src="../images/about_us/gallery_3.jpg" alt="Зал">
+        </div>
+
+    </div>
+</section>
+    <!-- 7. Подвал сайта -->
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-main">
+            <div class="footer-col footer-about">
+                <h3 class="footer-logo">VELORA</h3>
+                <p class="footer-desc">
+                    Изысканная кухня и атмосфера, созданная для ваших самых важных моментов.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Навигация</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="../menu/menu.html">Наше меню</a></li>
+                    <li><a href="../about_us/about_us.html">О нас</a></li>
+                     <li><a href="../gallery/gallery.html">Галерея</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Часы работы</h4>
+                <ul class="footer-info">
+                    <li><span>Пн – Пт:</span> 12:00 – 23:00</li>
+                    <li><span>Сб – Вс:</span> 11:00 – 00:00</li>
+                    <li class="kitchen-note">Кухня работает до 22:30</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Контакты</h4>
+                <ul class="footer-info">
+                    <li><i class="fa-solid fa-location-dot info-icon"></i> пр. Исмоила сомони, 12</li>
+                    <li><i class="fa-solid fa-phone info-icon"></i> +992 103-77-88-77</li>
+                    <li><i class="fa-solid fa-envelope info-icon"></i> info@velora.ru</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VELORA. Все права защищены.</p>
+            <a href="../privacy.html" class="privacy-link">Политика конфиденциальности</a>
+        </div>
+
+    </div>
+</footer>
+<script src="../js/config.js"></script>
+<script src="../js/site.js"></script>
+<script src="contacts.js"></script>
+</body>
+</html>

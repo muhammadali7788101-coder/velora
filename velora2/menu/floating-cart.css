@@ -1,0 +1,66 @@
+
+
+
+.velora-cart-float,
+.velora-cart-modal,
+.velora-cart-modal * {
+    box-sizing: border-box;
+}
+
+.velora-cart-float {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 9998;
+    width: 66px;
+    height: 66px;
+    border: 1px solid #D0AE73;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #171717, #090A0B);
+    color: #D0AE73;
+    font-size: 23px;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(208, 174, 115, 0.15);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.velora-cart-float:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(208, 174, 115, 0.3);
+}
+
+.velora-cart-count {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    min-width: 23px;
+    height: 23px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0B0C0E;
+    border-radius: 50px;
+    background: #D0AE73;
+    color: #0B0C0E;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.velora-cart-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(7px);
+}
+
+
+.velora-cart-overlay.is-open {
+    display: flex;
+}

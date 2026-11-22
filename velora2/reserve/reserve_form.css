@@ -1,0 +1,425 @@
+
+
+.online-reserve-section {
+    padding: 90px 0;
+    background: #080b0e;
+}
+
+.online-reserve-container {
+    width: 86%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+
+.reserve-form-block {
+    background: linear-gradient(135deg, #0d1217 0%, #090e13 100%);
+    border: 1px solid rgba(201, 157, 91, 0.3);
+    border-radius: 14px;
+    padding: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.reserve-form-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(205, 166, 110, 0.8), transparent);
+}
+
+.reserve-form-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(32px, 3.5vw, 42px);
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.reserve-form-desc {
+    color: #a8a49d;
+    font-size: 13.5px;
+    margin-bottom: 35px;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+
+.input-group {
+    position: relative;
+    background: #05080b;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.input-group.full-width {
+    grid-column: span 2;
+    align-items: flex-start;
+}
+
+
+.input-group:hover {
+    border-color: rgba(205, 166, 110, 0.5);
+}
+
+.input-group:focus-within {
+    border-color: #cda66e;
+    background: #080c10;
+    box-shadow: 0 0 15px rgba(205, 166, 110, 0.15);
+    transform: translateY(-1px);
+}
+
+.input-icon {
+    color: #cda66e;
+    font-size: 16px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.input-group:focus-within .input-icon {
+    transform: scale(1.1);
+}
+
+.textarea-icon {
+    margin-top: 4px;
+}
+
+.input-data-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.input-data-wrap label {
+    font-size: 10px;
+    color: #8c8880;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 3px;
+    font-weight: 500;
+}
+
+.input-data-wrap input,
+.input-data-wrap textarea {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+}
+
+.input-data-wrap textarea {
+    resize: none;
+    padding-top: 2px;
+}
+
+.input-arrow {
+    color: #8c8880;
+    font-size: 11px;
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.input-group:hover .input-arrow {
+    color: #cda66e;
+}
+
+
+.btn-book-submit {
+    width: 100%;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #f0e1c7 0%, #d4ae78 100%);
+    color: #120e0a;
+    border: none;
+    padding: 17px;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(212, 174, 120, 0.2);
+}
+
+.btn-book-submit:hover {
+    background: linear-gradient(135deg, #faebd2 0%, #cda66e 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(205, 166, 110, 0.4);
+}
+
+.security-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    color: #8c8880;
+    font-size: 11.5px;
+}
+
+.security-note i {
+    color: #cda66e;
+}
+
+
+.reserve-quote-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(201, 157, 91, 0.3);
+    min-height: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.reserve-quote-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reserve-quote-card:hover .reserve-quote-img {
+    transform: scale(1.05);
+}
+
+.reserve-quote-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 11, 14, 0.6) 0%, rgba(8, 11, 14, 0.85) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.quote-sublabel {
+    color: #cda66e;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.quote-heading {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(30px, 3.2vw, 40px);
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 35px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.quote-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #cda66e;
+}
+
+.quote-logo i {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.quote-logo span {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 17px;
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+.quote-logo small {
+    font-size: 7.5px;
+    letter-spacing: 3px;
+    color: #cda66e;
+}
+
+
+@media (max-width: 1024px) {
+    .online-reserve-container {
+        grid-template-columns: 1fr;
+    }
+
+    .reserve-form-block {
+        padding: 35px 25px;
+    }
+
+    .reserve-quote-card {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-group.full-width {
+        grid-column: span 1;
+    }
+}
+
+.reserve-form-block .section-label {
+    display: inline-block;
+    color: #cda66e;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+
+.select-dropdown {
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.select-dropdown.active .input-arrow {
+    transform: rotate(180deg);
+    color: #cda66e;
+}
+
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: #0d1217;
+    border: 1px solid rgba(201, 157, 91, 0.35);
+    border-radius: 10px;
+    padding: 6px;
+    z-index: 50;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    display: none; 
+}
+
+
+.select-dropdown.active .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.dropdown-item {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #a8a49d;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: rgba(205, 166, 110, 0.15);
+    color: #ffffff;
+}
+
+.dropdown-item.active {
+    color: #cda66e;
+    font-weight: 600;
+}
+
+.booking-status {
+    min-height: 20px;
+    margin: 0 0 14px;
+    font-size: 14px;
+    color: #D0AE73;
+}
+.booking-status.is-error { color: #e57373; }
+.booking-status.is-ok { color: #8bc48a; }
+.btn-book-submit:disabled { opacity: 0.6; cursor: wait; }
+
+
+.select-dropdown.active { z-index: 60; }
+.dropdown-menu { max-height: 260px; overflow-y: auto; }
+/* Список дат */
+#dateDropdown {
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+/* Отдельная дата */
+#dateDropdown .dropdown-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+/* Наведение */
+#dateDropdown .dropdown-item:hover {
+    background: #f0e6d2;
+}
+
+/* Выбранная дата */
+#dateDropdown .dropdown-item.active {
+    background: #e6c587;
+    color: #0b0c0e;
+}
+/* Поле выбранной даты */
+#dateInput {
+    width: 100%;
+    padding: 15px 45px 15px 18px;
+
+    background: #0B0C0E;
+    color: #E6C587;
+
+    border: 1px solid rgba(230, 197, 135, 0.4);
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении и открытии */
+.select-dropdown:hover #dateInput,
+.select-dropdown.active #dateInput {
+    border-color: #E6C587;
+    box-shadow: 0 0 10px rgba(230, 197, 135, 0.12);
+}
+
+/* Убираем стандартный вид */
+#dateInput:focus {
+    outline: none;
+}

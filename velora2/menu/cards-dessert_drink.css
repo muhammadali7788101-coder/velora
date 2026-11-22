@@ -1,0 +1,254 @@
+
+
+
+
+.drinks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #0E0F12;
+    border: 1px solid #1C1D21;
+    border-radius: 14px;
+    padding: 20px 24px;
+}
+
+
+.drink-item {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+
+
+.drink-thumb {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden; 
+    flex-shrink: 0;
+    border: 1px solid #2A2B31;
+    position: relative;
+}
+
+
+.drink-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    transform: scale(2);
+    
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+}
+
+
+.drink-item:hover .drink-thumb img {
+    transform: scale(2.4);
+}
+
+
+.drink-name {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+
+.drink-dots {
+    flex: 1;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+    height: 1px;
+    margin: 0 6px;
+}
+
+
+.drink-price {
+    color: #D0AE73;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+.drink-item .add-to-cart-btn {
+    margin-left: 6px;
+}
+
+
+.bottom-menu-row {
+    display: grid;
+    
+    grid-template-columns: 3.2fr 1fr; 
+    gap: 20px;
+    align-items: start;
+    width: 100%;
+}
+
+
+.desserts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+
+.desserts-grid .dish-card {
+    padding: 0 0 10px 0;
+}
+
+.desserts-grid .dish-img {
+    height: 110px; 
+}
+
+.desserts-grid .dish-title,
+.desserts-grid .dish-desc,
+.desserts-grid .dish-footer {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.desserts-grid .dish-title {
+    font-size: 12px;
+}
+
+.desserts-grid .dish-desc {
+    font-size: 10px;
+}
+
+
+.drinks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #0E0F12;
+    border: 1px solid #1C1D21;
+    border-radius: 14px;
+    padding: 16px 18px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.drink-thumb {
+    width: 32px;
+    height: 32px;
+}
+
+.drink-name {
+    font-size: 12px;
+}
+
+.drink-price {
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+.dish-img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 12px;
+}
+.dish-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+
+.dish-title,
+.dish-desc,
+.dish-footer {
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.dish-title {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.dish-desc {
+    color: #7A7A7E;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex: 1; 
+}
+
+.dish-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dish-price {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.add-to-cart-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #D0AE73;
+    border-color: #D0AE73;
+    color: #0B0C0E;
+}
+
+
+
+
+
+
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+}
+
+.cart-item img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item h3 {
+    margin: 0 0 8px;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.remove-cart-item {
+    margin-left: auto;
+    cursor: pointer;
+}

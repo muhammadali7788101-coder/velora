@@ -1,0 +1,80 @@
+@import "contacts_fast.css";
+@import "contacts_hero.css";
+@import "contacts_info.css";
+@import "contacts_map.css";
+
+:root {
+    --bg-dark: #080b0e;
+    --bg-card: #0d1217;
+    --gold: #cda66e;
+    --gold-light: #d4ae78;
+    --gold-btn: #e8d7bb;
+    --text-main: #f2e9dd;
+    --text-muted: #a8a49d;
+    --border-gold: rgba(201, 157, 91, 0.25);
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+.section-label {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .contact-hero-container,
+    .contact-form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 0;
+    }
+
+    .contact-info-card:nth-child(2) {
+        border-left: 1px solid var(--border-gold);
+    }
+
+    .contact-info-card:nth-child(3) {
+        border-left: none;
+    }
+
+    .contact-map-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map-gallery {
+        flex-direction: row;
+    }
+
+    .contact-map-gallery img {
+        height: 120px;
+    }
+}

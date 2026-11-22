@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Забронируйте столик</title>
+    <meta name="description" content="Онлайн-заявка на бронирование столика в ресторане VELORA.">
+         <!-- 1. Подключение шрифтов, иконок и стилей -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+     <link rel="stylesheet" href="../global_style/global.css">
+    <link rel="stylesheet" href="reserve.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+         <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="header-logo">
+                <i class="fa-solid fa-wine-glass logo-icon"></i>
+                <div class="logo-text">
+                    <span class="logo-title">VELORA</span>
+                    <span class="logo-subtitle">RESTAURANT</span>
+                </div>
+            </a>
+
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Главная</a></li>
+                    <li><a href="../menu/menu.html" class="nav-link ">Меню</a></li>
+                    <li><a href="../about_us/about_us.html" class="nav-link" >О нас</a></li>
+                    <li><a href="../gallery/gallery.html" class="nav-link">Галерея</a></li>
+                    <li><a href="../contacts/contacts.html" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <a href="reserve.html" class="btn-book">
+                    <span>Забронировать стол</span>
+                    <i class="fa-regular fa-calendar-check book-icon"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+<section class="reserve-hero">
+    <div class="reserve-hero-container">
+        
+        <div class="reserve-hero-content">
+            <span class="section-label">БРОНИРОВАНИЕ</span>
+            <h1 class="reserve-hero-title">Забронируйте<br>свой столик</h1>
+            <p class="reserve-hero-desc">
+                Подарите себе и своим близким особенный вечер. Выберите удобную дату, время и количество гостей — мы позаботимся обо всём остальном.
+            </p>
+
+            <!-- 2. Шапка сайта и навигация -->
+            <div class="reserve-perks">
+                <div class="perk-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Быстрое подтверждение</span>
+                </div>
+                <div class="perk-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Гарантия лучших мест</span>
+                </div>
+                <div class="perk-item">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Особые пожелания по запросу</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="online-reserve-section">
+    <div class="online-reserve-container">
+        
+        <!-- 3. Hero-баннер бронирования -->
+        <div class="reserve-form-block">
+            <span class="section-label">ОНЛАЙН-БРОНИРОВАНИЕ</span>
+            <h2 class="reserve-form-title">Выберите дату и время</h2>
+            <p class="reserve-form-desc">
+                Заполните форму, и мы подтвердим вашу бронь в течение нескольких минут.
+            </p>
+
+<form class="booking-form">
+    <div class="form-grid">
+        
+        
+        <div class="input-group">
+            <span class="input-icon"><i class="fa-regular fa-user"></i></span>
+            <div class="input-data-wrap">
+                <label for="clientNameInput">Ваше имя</label>
+                <input type="text" id="clientNameInput" name="clientName" placeholder="Введите ваше имя" autocomplete="name" required>
+            </div>
+        </div>
+
+        
+        <div class="input-group">
+            <span class="input-icon"><i class="fa-solid fa-phone"></i></span>
+            <div class="input-data-wrap">
+                <label for="clientPhoneInput">Телефон</label>
+                <input type="tel" id="clientPhoneInput" name="phone" placeholder="+992" autocomplete="tel" required>
+            </div>
+        </div>
+
+        <!-- 4. Преимущества бронирования -->
+         <div class="input-group select-dropdown">
+    <input
+        type="text"
+        id="dateInput"
+        placeholder="Выберите дату"
+        readonly
+        required
+        aria-label="Дата бронирования"
+    >
+
+    <div class="dropdown-menu" id="dateDropdown">
+        <!-- Даты будут автоматически добавлены через JavaScript -->
+    </div>
+</div>
+        
+
+        
+        <div class="input-group select-dropdown">
+            <span class="input-icon"><i class="fa-regular fa-clock"></i></span>
+            <div class="input-data-wrap">
+                <label>Время</label>
+                <input type="text" id="timeInput" value="19:00" readonly required aria-label="Время бронирования">
+            </div>
+            <span class="input-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+
+            <div class="dropdown-menu">
+                <div class="dropdown-item">12:00</div>
+                <div class="dropdown-item">13:00</div>
+                <div class="dropdown-item">14:00</div>
+                <div class="dropdown-item">15:00</div>
+                <div class="dropdown-item">16:00</div>
+                <div class="dropdown-item">17:00</div>
+                <div class="dropdown-item">18:00</div>
+                <div class="dropdown-item active">19:00</div>
+                <div class="dropdown-item">20:00</div>
+                <div class="dropdown-item">21:00</div>
+                <div class="dropdown-item">22:00</div>
+                <div class="dropdown-item">23:00</div>
+            </div>
+        </div>
+
+        
+        <div class="input-group select-dropdown">
+            <span class="input-icon"><i class="fa-solid fa-users"></i></span>
+            <div class="input-data-wrap">
+                <label for="guestsInput">Количество гостей</label>
+                <input type="text" id="guestsInput" value="2 гостя" readonly aria-label="Количество гостей">
+            </div>
+            <span class="input-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+
+            <div class="dropdown-menu">
+                <div class="dropdown-item">1 гость</div>
+                <div class="dropdown-item active">2 гостя</div>
+                <div class="dropdown-item">3-4 гостя</div>
+                <div class="dropdown-item">5-6 гостей</div>
+                <div class="dropdown-item">Большая компания (7+)</div>
+            </div>
+        </div>
+
+        <!-- 5. Форма онлайн-бронирования -->
+        <div class="input-group select-dropdown">
+            <span class="input-icon"><i class="fa-solid fa-utensils"></i></span>
+            <div class="input-data-wrap">
+                <label for="tableInput">Тип стола</label>
+                <input type="text" id="tableInput" value="Обычный" readonly aria-label="Тип стола">
+            </div>
+            <span class="input-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+
+            <div class="dropdown-menu">
+                <div class="dropdown-item active">Обычный</div>
+                <div class="dropdown-item">У окна</div>
+                <div class="dropdown-item">Тихий уголок</div>
+                <div class="dropdown-item">VIP-зал</div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    <div class="input-group full-width">
+        <span class="input-icon textarea-icon"><i class="fa-regular fa-comment"></i></span>
+        <div class="input-data-wrap">
+            <label for="bookingComment">Ваши пожелания (необязательно)</label>
+            <textarea id="bookingComment" rows="2" placeholder="Например: у окна, романтическая атмосфера, день рождения и т.д."></textarea>
+        </div>
+    </div>
+
+    <button type="submit" class="btn-book-submit">
+        Забронировать столик &rarr;
+    </button>
+</form>
+        </div>
+
+        <!-- 6. Атмосферная карточка с цитатой -->
+        <div class="reserve-quote-card">
+            <img src="../images/fon.jpg" alt="Атмосфера ресторана" class="reserve-quote-img">
+            <div class="reserve-quote-overlay">
+                <span class="quote-sublabel">ВАШ ОСОБЕННЫЙ ВЕЧЕР</span>
+                <h3 class="quote-heading">Начинается<br>с бронирования</h3>
+                <div class="quote-logo">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                    <span>VELORA</span>
+                    <small>RESTAURANT</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="comfort-section">
+    <div class="comfort-container">
+        
+        
+        <div class="comfort-info">
+            <span class="section-label">ПОЧЕМУ СТОИТ ЗАБРОНИРОВАТЬ</span>
+            <h2 class="comfort-title">Мы делаем всё<br>для вашего комфорта</h2>
+            <p class="comfort-desc">
+                В Velora мы ценим ваше время и комфорт. Бронирование столика — это не просто формальность, а начало вашего идеального вечера.
+            </p>
+            <a href="../menu/menu.html" class="btn-outline-gold">
+                Ознакомиться с меню &rarr;
+            </a>
+        </div>
+
+        <!-- 7. Секция комфорта и преимущества ресторана -->
+        <div class="comfort-grid">
+            <div class="comfort-card">
+                <div class="comfort-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <h3 class="comfort-card-title">Лучшие места</h3>
+                <p class="comfort-card-text">Выберите идеальное расположение: у окна, в зале или в уединенной зоне.</p>
+            </div>
+
+            <div class="comfort-card">
+                <div class="comfort-icon"><i class="fa-solid fa-user-gear"></i></div>
+                <h3 class="comfort-card-title">Индивидуальный подход</h3>
+                <p class="comfort-card-text">Учитываем ваши пожелания и особые случаи.</p>
+            </div>
+
+            <div class="comfort-card">
+                <div class="comfort-icon"><i class="fa-regular fa-clock"></i></div>
+                <h3 class="comfort-card-title">Подтверждение за 5 минут</h3>
+                <p class="comfort-card-text">Быстрая обработка и мгновенное подтверждение.</p>
+            </div>
+
+            <div class="comfort-card">
+                <div class="comfort-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+                <h3 class="comfort-card-title">Комфортная атмосфера</h3>
+                <p class="comfort-card-text">Всё, чтобы ваш вечер был по-настоящему особенным.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-main">
+            <div class="footer-col footer-about">
+                <h3 class="footer-logo">VELORA</h3>
+                <p class="footer-desc">
+                    Изысканная кухня и атмосфера, созданная для ваших самых важных моментов.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Навигация</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="../menu/menu.html">Наше меню</a></li>
+                    <li><a href="../about_us/about_us.html">О нас</a></li>
+                     <li><a href="../gallery/gallery.html">Галерея</a></li>
+                    <li><a href="../contacts/contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Часы работы</h4>
+                <ul class="footer-info">
+                    <li><span>Пн – Пт:</span> 12:00 – 23:00</li>
+                    <li><span>Сб – Вс:</span> 11:00 – 00:00</li>
+                    <li class="kitchen-note">Кухня работает до 22:30</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Контакты</h4>
+                <ul class="footer-info">
+                    <li><i class="fa-solid fa-location-dot info-icon"></i> пр. Исмоила сомони, 12</li>
+                    <li><i class="fa-solid fa-phone info-icon"></i> +992 103-77-88-77</li>
+                    <li><i class="fa-solid fa-envelope info-icon"></i> info@velora.ru</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VELORA. Все права защищены.</p>
+            <a href="../privacy.html" class="privacy-link">Политика конфиденциальности</a>
+        </div>
+
+    </div>
+</footer>
+<script src="../js/config.js"></script>
+<script src="../js/site.js"></script>
+<script src="reserve.js"></script>
+</body>
+</html>

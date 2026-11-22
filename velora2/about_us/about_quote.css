@@ -1,0 +1,90 @@
+
+
+.about-quote-hero {
+    position: relative;
+    width: 100%;
+    min-height: 480px; 
+    padding: 100px 0;
+    
+    
+    background: linear-gradient(
+            180deg, 
+            rgba(8, 11, 14, 0.2) 0%, 
+            rgba(8, 11, 14, 0.85) 100%
+        ),
+        url('../images/about_us/banner_quote.jpg') center/cover no-repeat fixed; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-quote-container {
+    position: relative;
+    z-index: 2;
+    width: 86%;
+    max-width: 850px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.about-quote-line {
+    width: 50px;
+    height: 1px;
+    background: #cda66e;
+    margin-bottom: 24px;
+}
+
+
+.about-quote-icon {
+    margin-bottom: 18px;
+    color: #cda66e;
+    font-size: 24px;
+}
+
+
+.about-quote-text {
+    margin: 0 0 22px;
+    padding: 0;
+    border: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(22px, 3vw, 34px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.about-quote-author {
+    color: #cda66e;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 650px) {
+    .about-quote-hero {
+        min-height: 380px;
+        padding: 70px 0;
+        background-attachment: scroll; 
+    }
+
+    .about-quote-container {
+        width: 90%;
+    }
+
+    .about-quote-text {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+}

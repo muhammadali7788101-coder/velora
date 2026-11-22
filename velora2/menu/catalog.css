@@ -1,0 +1,185 @@
+@import "cards-dessert_drink.css";
+@import "fix.css";
+@import "menu-hero.css";
+@import "menu-tab.css";
+@import "all_menu_1.css";
+@import "menu-sidebar.css";
+@import "floating-cart.css";
+@import "cart.css";
+
+.catalog-main {
+    background-color: #0B0C0E;
+    padding-bottom: 100px;
+}
+
+.catalog-container {
+    width: 90%;
+    max-width: 1350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    align-items: start;
+}
+
+
+
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.dish-card {
+    background: #0E0F12;
+    border: 1px solid #1C1D21;
+    border-radius: 12px;
+    padding: 0 0 14px 0; 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dish-card:hover {
+    border-color: rgba(208, 174, 115, 0.4);
+    transform: translateY(-4px);
+}
+
+
+.dish-img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 12px;
+}
+
+.dish-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+
+.dish-title,
+.dish-desc,
+.dish-footer {
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.dish-title {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.dish-desc {
+    color: #7A7A7E;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex: 1; 
+}
+
+.dish-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dish-price {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.add-to-cart-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #D0AE73;
+    border-color: #D0AE73;
+    color: #0B0C0E;
+}
+
+
+
+
+
+
+.menu-section[hidden] { display: none !important; }
+.empty-menu-message { color: #d0ae73; padding: 35px 10px; text-align: center; }
+@media (max-width: 1100px) { .dishes-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .dishes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .catalog-container { display: block; } }
+@media (max-width: 480px) { .dishes-grid { grid-template-columns: 1fr; } }
+
+
+.dish-card {
+    min-width: 0;
+    min-height: 100%;
+    background: linear-gradient(160deg, #151619, #0e0f12 75%);
+    border-color: rgba(208, 174, 115, .15);
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .14);
+}
+
+.dish-img {
+    height: 175px;
+    flex: 0 0 175px;
+    overflow: hidden;
+    background: #191a1d;
+}
+
+.dish-img img {
+    transition: transform .45s ease;
+}
+
+.dish-card:hover .dish-img img {
+    transform: scale(1.045);
+}
+
+.dish-title {
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.dish-desc {
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.dish-price {
+    color: #e5c58e;
+}
+
+.add-to-cart-btn {
+    width: 34px;
+    height: 34px;
+    border-color: rgba(208, 174, 115, .5);
+    color: #e5c58e;
+    background: rgba(208, 174, 115, .07);
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+    background: #d0ae73;
+    color: #0b0c0e;
+}
+
+@media (max-width: 480px) {
+    .dish-img { height: 155px; flex-basis: 155px; }
+}

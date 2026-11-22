@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELORA</title>
+    <meta name="description" content="Ресторанный сайт VELORA: меню, блюда, онлайн-заказ, бронирование столиков и информация о ресторане.">
+   <link rel="stylesheet" href="global_style/global.css">
+   <link rel="stylesheet" href="global_style/velora-modal-card.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="menu/floating-cart.css">
+<link rel="stylesheet" href="menu/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    
+   <!-- 1. Подключение ресурсов и общая структура страницы -->
+<header class="header">
+    <div class="header-container">
+        
+        <a href="index.html" class="header-logo">
+            <i class="fa-solid fa-wine-glass logo-icon"></i>
+            <div class="logo-text">
+                <span class="logo-title">VELORA</span>
+                <span class="logo-subtitle">RESTAURANT</span>
+            </div>
+        </a>
+
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link active">Главная</a></li>
+                <li><a href="menu/menu.html" class="nav-link">Меню</a></li>
+                <li><a href="about_us/about_us.html" class="nav-link">О нас</a></li>
+                <li><a href="gallery/gallery.html" class="nav-link">Галерея</a></li>
+                <li><a href="contacts/contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <a href="reserve/reserve.html" class="btn-book">
+                <span>Забронировать стол</span>
+                <i class="fa-regular fa-calendar-check book-icon"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- 2. Шапка сайта и навигация -->
+<section class="hero-wrapper" style="background-image: url('images/fon.jpg');">
+    <div class="hero-banner-txt">
+        <span class="hero-subtitle">ВКУС, КОТОРЫЙ ВДОХНОВЛЯЕТ</span>
+        <h1 class="hero-title">
+            Изысканная кухня<br>
+            в уютной атмосфере
+        </h1>
+        <p class="hero-description">
+            Мы создаём не просто блюда, а настоящие эмоции.<br>
+            В нашем ресторане каждый вкус — это история.
+        </p>
+        <div class="hero-buttons">
+            <a href="menu/menu.html" class="btn btn-primary">
+                Посмотреть меню 
+                <span class="btn-arrow">&rarr;</span>
+            </a>
+            <a href="about_us/about_us.html" class="btn btn-secondary">О нас</a>
+        </div>
+    </div>
+</section>
+
+    <section class="features">
+    <div class="features-container">
+        
+        <div class="feature-item">
+            <div class="feature-icon">
+                <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h4 class="feature-title">Свежие продукты</h4>
+            <p class="feature-text">Только лучшее</p>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-icon">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h4 class="feature-title">Авторские рецепты</h4>
+            <p class="feature-text">От шеф-повара</p>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-icon">
+                <i class="fa-solid fa-gem"></i>
+            </div>
+            <h4 class="feature-title">Уютная атмосфера</h4>
+            <p class="feature-text">Для особых моментов</p>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-icon">
+                <i class="fa-solid fa-user-group"></i>
+            </div>
+            <h4 class="feature-title">Приветливый сервис</h4>
+            <p class="feature-text">С заботой о вас</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="menu-section">
+    <div class="menu-container">
+        
+        
+        <div class="menu-info">
+            <span class="menu-subtitle">ПОПУЛЯРНЫЕ БЛЮДА</span>
+            <h2 class="menu-title">Наше меню</h2>
+            <p class="menu-description">
+                В нашем меню вы найдёте блюда на любой вкус — от классики до авторских кулинарных решений.
+            </p>
+            <a href="menu/menu.html" class="btn-menu-link">
+                Перейти к меню <span class="arrow">&rarr;</span>
+            </a>
+        </div>
+
+        
+        <div class="menu-grid" id="homeMenuGrid">
+            <p class="home-menu-loading">Загружаем блюда...</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- 3. Главный Hero-баннер -->
+<section class="about_we">
+    <div class="about_container">
+
+       
+        <div class="left_img">
+            <img src="images/photo_2026-09-15_18-56-05.jpg" alt="Интерьер Velora">
+        </div>
+
+      
+        <div class="center_about">
+            <span class="menu-subtitle">О нас</span>
+            <h2 class="menu-title">Немного о VELORA</h2>
+            <p class="menu-description">
+                Velora — это больше, чем просто ресторан. Это место, где встречаются вкус, стиль и люди.
+            </p>
+
+            
+            <div class="about-stats">
+                <div class="stat-item">
+                    <i class="fa-solid fa-utensils stat-icon"></i>
+                    <div>
+                        <strong>Более 50</strong>
+                        <span>блюд в меню</span>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <i class="fa-regular fa-star stat-icon"></i>
+                    <div>
+                        <strong>4.9</strong>
+                        <span>рейтинг гостей</span>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <i class="fa-regular fa-heart stat-icon"></i>
+                    <div>
+                        <strong>1000+</strong>
+                        <span>довольных гостей</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="about_us/about_us.html" class="btn-more">Узнать больше &rarr;</a>
+        </div>
+
+       
+        <div class="right_imgs">
+            <div class="small-img-box">
+                <img src="images/cafe_room.jpg" alt="Кофе">
+            </div>
+            <div class="small-img-box">
+                <img src="images/coffee.jpg" alt="Зал">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+ <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-main">
+            <div class="footer-col footer-about">
+                <h3 class="footer-logo">VELORA</h3>
+                <p class="footer-desc">
+                    Изысканная кухня и атмосфера, созданная для ваших самых важных моментов.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Навигация</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="menu/menu.html">Наше меню</a></li>
+                    <li><a href="about_us/about_us.html">О нас</a></li>
+                     <li><a href="gallery/gallery.html">Галерея</a></li>
+                    <li><a href="contacts/contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Часы работы</h4>
+                <ul class="footer-info">
+                    <li><span>Пн – Пт:</span> 12:00 – 23:00</li>
+                    <li><span>Сб – Вс:</span> 11:00 – 00:00</li>
+                    <li class="kitchen-note">Кухня работает до 22:30</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Контакты</h4>
+                <ul class="footer-info">
+                    <li><i class="fa-solid fa-location-dot info-icon"></i> пр. Исмоила сомони, 12</li>
+                    <li><i class="fa-solid fa-phone info-icon"></i> +992 103-77-88-77</li>
+                    <li><i class="fa-solid fa-envelope info-icon"></i> info@velora.ru</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VELORA. Все права защищены.</p>
+            <a href="privacy.html" class="privacy-link">Политика конфиденциальности</a>
+        </div>
+
+    </div>
+</footer>
+
+
+<button class="velora-cart-float" id="veloraCartOpen" aria-label="Открыть корзину">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span class="velora-cart-count">0</span>
+</button>
+<div class="velora-cart-overlay" id="veloraCartOverlay">
+    <div class="velora-cart-modal">
+
+        <button class="velora-cart-close" id="veloraCartClose" aria-label="Закрыть">
+            &times;
+        </button>
+
+        <div class="velora-cart-heading">
+            <div class="velora-cart-icon">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+
+            <div>
+                <h2>Корзина</h2>
+                <p id="veloraCartSubtitle">0 товаров · 0.00 $</p>
+            </div>
+        </div>
+
+        <div class="velora-cart-layout">
+
+            <!-- 4. Основные секции главной страницы -->
+            <section class="velora-cart-products">
+
+                <div class="velora-cart-empty">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <p>Ваша корзина пока пуста</p>
+                    <span>Добавьте что-нибудь вкусное из нашего меню</span>
+                </div>
+
+                <div id="veloraCartItems"></div>
+
+                <div class="velora-cart-summary">
+                    <div class="velora-summary-row">
+                        <span>Сумма заказа</span>
+                        <span id="veloraCartSubtotal">0.00 $</span>
+                    </div>
+
+                    <div class="velora-summary-row">
+                        <span>Доставка</span>
+                        <span id="veloraCartDelivery">Бесплатно</span>
+                    </div>
+
+                    <div class="velora-summary-total">
+                        <span>Итого</span>
+                        <span id="veloraCartTotal">0.00 $</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 5. Блоки меню и карточки товаров -->
+            <section class="velora-checkout">
+
+                <h3>Оформление заказа</h3>
+
+                <p class="velora-checkout-description">
+                    Пожалуйста, укажите ваши данные для оформления заказа и доставки.
+                </p>
+
+                <form id="veloraOrderForm">
+
+                    <label class="velora-input-wrap">
+                        <i class="fa-regular fa-user"></i>
+                        <input
+                            type="text"
+                            id="veloraCustomerName"
+                            placeholder="Ваше имя"
+                            required
+                        >
+                    </label>
+
+                    <label class="velora-input-wrap">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="velora-input-content">
+                            <input
+                                type="text"
+                                id="veloraCustomerAddress"
+                                placeholder="Адрес доставки"
+                                required
+                            >
+                            <small>Например: ул. Ленина, 12</small>
+                        </div>
+                    </label>
+
+                    <label class="velora-input-wrap">
+                        <i class="fa-solid fa-phone"></i>
+                        <input
+                            type="tel"
+                            id="veloraCustomerPhone"
+                            placeholder="+992 900 00 00 00"
+                            required
+                        >
+                    </label>
+
+                    <div class="velora-delivery-title">
+                        Способ получения
+                    </div>
+
+                    <label class="velora-delivery-option selected">
+                        <input
+                            type="radio"
+                            name="delivery"
+                            value="delivery"
+                            checked
+                        >
+
+                        <span class="velora-radio"></span>
+
+                        <span>
+                            <strong>Доставка</strong>
+                            <small>Курьер приедет к вам</small>
+                        </span>
+                    </label>
+
+                    <label class="velora-delivery-option ">
+                        <input
+                            type="radio"
+                            name="delivery"
+                            value="pickup"
+                        >
+
+                        <span class="velora-radio"></span>
+
+                        <span>
+                            <strong>Самовывоз</strong>
+                            <small>Заберите заказ в ресторане</small>
+                        </span>
+                    </label>
+
+                    <label class="velora-comment-label" for="veloraOrderComment">
+                        Комментарий к заказу
+                        <span>(необязательно)</span>
+                    </label>
+
+                    <textarea
+                        id="veloraOrderComment"
+                        placeholder="Например: без лука, больше соуса..."
+                    ></textarea>
+
+                    <button type="submit" class="velora-order-button">
+                        <span>Оформить заказ</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <p class="velora-privacy-note">
+                        <i class="fa-solid fa-lock"></i>
+                        Ваши данные используются для оформления заказа
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+    </div>
+</div>
+<!-- 6. Корзина и оформление заказа -->
+<div class="velora-modal-overlay" id="dishModalOverlay">
+    <div class="velora-modal-card" id="dishModalCard">
+        <button class="velora-modal-close" id="dishModalClose">&times;</button>
+        <div class="velora-modal-body" id="dishModalBody">
+            <!-- 7. Модальное окно быстрого просмотра -->
+        </div>
+    </div>
+</div>
+<div class="velora-success-overlay" id="successModalOverlay">
+    <div class="velora-success-card">
+        <div class="success-icon">✨</div>
+        <h2>Заказ успешно оформлен!</h2>
+        <p>Спасибо за ваш выбор. Наш менеджер скоро свяжется с вами для подтверждения.</p>
+        <button class="success-close-btn" id="successCloseBtn">Отлично</button>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+<script src="menu/menu-api.js"></script>
+<script src="menu/cart.js"></script>
+<script src="menu/floating-cart.js"></script>
+<script src="global_style/velora-modal-card.js"></script>
+<script src="global_style/orders.js"></script>
+
+
+</body>
+</html>

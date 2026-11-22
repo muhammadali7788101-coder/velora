@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наше меню — VELORA Restaurant</title>
+    <meta name="description" content="Меню ресторана VELORA: каталог блюд, цены, корзина и оформление заказа.">
+    
+    <!-- 1. Подключение шрифтов, иконок и стилей -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 2. Шапка сайта и навигация -->
+     <link rel="stylesheet" href="../global_style/global.css">
+     <link rel="stylesheet" href="../global_style/velora-modal-card.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="floating-cart.css">
+    <link rel="stylesheet" href="catalog.css">
+       
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+
+    
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="header-logo">
+                <i class="fa-solid fa-wine-glass logo-icon"></i>
+                <div class="logo-text">
+                    <span class="logo-title">VELORA</span>
+                    <span class="logo-subtitle">RESTAURANT</span>
+                </div>
+            </a>
+
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Главная</a></li>
+                    <li><a href="menu.html" class="nav-link active">Меню</a></li>
+                    <li><a href="../about_us/about_us.html" class="nav-link">О нас</a></li>
+                    <li><a href="../gallery/gallery.html" class="nav-link">Галерея</a></li>
+                    <li><a href="../contacts/contacts.html" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <a href="../reserve/reserve.html" class="btn-book">
+                    <span>Забронировать стол</span>
+                    <i class="fa-regular fa-calendar-check book-icon"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Hero-баннер каталога -->
+    <section class="menu-hero">
+        <div class="menu-hero-container">
+            <div class="breadcrumbs">ГЛАВНАЯ / МЕНЮ</div>
+            <h1 class="menu-hero-title">Наше меню</h1>
+            <p class="menu-hero-desc">
+                Мы готовим с любовью, используя только свежие и качественные продукты. 
+                Каждое блюдо — это гармония вкуса, текстур и эстетики.
+            </p>
+            <span class="menu-hero-tagline">ВКУС, КОТОРЫЙ ВДОХНОВЛЯЕТ</span>
+        </div>
+    </section>
+
+    <!-- 4. Категории и фильтрация меню -->
+    <section class="menu-categories-section">
+        <div class="categories-container">
+            <div class="category-tabs" id="menuCategoryTabs">
+                <button class="tab-btn active" data-target="all"><i class="fa-solid fa-utensils"></i><span>Все блюда</span></button>
+            </div>
+        </div>
+    </section>
+
+    <main class="catalog-main">
+        <div class="catalog-container">
+            <div class="catalog-content" id="menuCatalog">
+                <div class="empty-menu-message">Загружаем меню...</div>
+            </div>
+        </div>
+    </main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-main">
+            <div class="footer-col footer-about">
+                <h3 class="footer-logo">VELORA</h3>
+                <p class="footer-desc">Изысканная кухня и атмосфера, созданная для ваших самых важных моментов.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Навигация</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="menu.html">Наше меню</a></li>
+                    <li><a href="../about_us/about_us.html">О нас</a></li>
+                    <li><a href="../gallery/gallery.html">Галерея</a></li>
+                    <li><a href="../contacts/contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Часы работы</h4>
+                <ul class="footer-info">
+                    <li><span>Пн – Пт:</span> 12:00 – 23:00</li>
+                    <li><span>Сб – Вс:</span> 11:00 – 00:00</li>
+                    <li class="kitchen-note">Кухня работает до 22:30</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Контакты</h4>
+                <ul class="footer-info">
+                    <li><i class="fa-solid fa-location-dot info-icon"></i> пр. Исмоила Сомони, 12</li>
+                    <li><i class="fa-solid fa-phone info-icon"></i> +992 103-77-88-77</li>
+                    <li><i class="fa-solid fa-envelope info-icon"></i> info@velora.ru</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VELORA. Все права защищены.</p>
+            <a href="../privacy.html" class="privacy-link">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>
+
+
+<button class="velora-cart-float" id="veloraCartOpen" type="button" aria-label="Открыть корзину">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span class="velora-cart-count">0</span>
+</button>
+
+<div class="velora-cart-overlay" id="veloraCartOverlay">
+    <div class="velora-cart-modal">
+
+        <button class="velora-cart-close" id="veloraCartClose" aria-label="Закрыть">
+            &times;
+        </button>
+
+        <div class="velora-cart-heading">
+            <div class="velora-cart-icon">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+
+            <div>
+                <h2>Корзина</h2>
+                <p id="veloraCartSubtitle">0 товаров · 0.00 $</p>
+            </div>
+        </div>
+
+        <div class="velora-cart-layout">
+
+            <!-- 5. Сетка карточек товаров -->
+            <section class="velora-cart-products">
+
+                <div class="velora-cart-empty">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <p>Ваша корзина пока пуста</p>
+                    <span>Добавьте что-нибудь вкусное из нашего меню</span>
+                </div>
+
+                <div id="veloraCartItems"></div>
+
+                <div class="velora-cart-summary">
+                    <div class="velora-summary-row">
+                        <span>Сумма заказа</span>
+                        <span id="veloraCartSubtotal">0.00 $</span>
+                    </div>
+
+                    <div class="velora-summary-row">
+                        <span>Доставка</span>
+                        <span id="veloraCartDelivery">Бесплатно</span>
+                    </div>
+
+                    <div class="velora-summary-total">
+                        <span>Итого</span>
+                        <span id="veloraCartTotal">0.00 $</span>
+                    </div>
+                </div>
+
+            </section>
+
+            
+            <section class="velora-checkout">
+
+                <h3>Оформление заказа</h3>
+
+                <p class="velora-checkout-description">
+                    Пожалуйста, укажите ваши данные для оформления заказа и доставки.
+                </p>
+
+                <form id="veloraOrderForm">
+
+                    <label class="velora-input-wrap">
+                        <i class="fa-regular fa-user"></i>
+                        <input
+                            type="text"
+                            id="veloraCustomerName"
+                            placeholder="Ваше имя"
+                            required
+                        >
+                    </label>
+
+                    <label class="velora-input-wrap">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="velora-input-content">
+                            <input
+                                type="text"
+                                id="veloraCustomerAddress"
+                                placeholder="Адрес доставки"
+                                required
+                            >
+                            <small>Например: ул. Ленина, 12</small>
+                        </div>
+                    </label>
+
+                    <label class="velora-input-wrap">
+                        <i class="fa-solid fa-phone"></i>
+                        <input
+                            type="tel"
+                            id="veloraCustomerPhone"
+                            placeholder="+992 900 00 00 00"
+                            required
+                        >
+                    </label>
+
+                    <div class="velora-delivery-title">
+                        Способ получения
+                    </div>
+
+                    <label class="velora-delivery-option selected">
+                        <input
+                            type="radio"
+                            name="delivery"
+                            value="delivery"
+                            checked
+                        >
+
+                        <span class="velora-radio"></span>
+
+                        <span>
+                            <strong>Доставка</strong>
+                            <small>Курьер приедет к вам</small>
+                        </span>
+                    </label>
+
+                    <label class="velora-delivery-option ">
+                        <input
+                            type="radio"
+                            name="delivery"
+                            value="pickup"
+                        >
+
+                        <span class="velora-radio"></span>
+
+                        <span>
+                            <strong>Самовывоз</strong>
+                            <small>Заберите заказ в ресторане</small>
+                        </span>
+                    </label>
+
+                    <label class="velora-comment-label" for="veloraOrderComment">
+                        Комментарий к заказу
+                        <span>(необязательно)</span>
+                    </label>
+
+                    <textarea
+                        id="veloraOrderComment"
+                        placeholder="Например: без лука, больше соуса..."
+                    ></textarea>
+
+                    <button type="submit" class="velora-order-button">
+                        <span>Оформить заказ</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <p class="velora-privacy-note">
+                        <i class="fa-solid fa-lock"></i>
+                        Ваши данные используются для оформления заказа
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+    </div>
+</div>
+
+<!-- 6. Корзина и оформление заказа -->
+<div class="velora-modal-overlay" id="dishModalOverlay">
+    <div class="velora-modal-card" id="dishModalCard">
+        <button class="velora-modal-close" id="dishModalClose">&times;</button>
+        <div class="velora-modal-body" id="dishModalBody">
+            <!-- 7. Модальное окно быстрого просмотра и скрипты -->
+        </div>
+    </div>
+</div>
+<div class="velora-success-overlay" id="successModalOverlay">
+    <div class="velora-success-card">
+        <div class="success-icon">✨</div>
+        <h2>Заказ успешно оформлен!</h2>
+        <p>Спасибо за ваш выбор. Наш менеджер скоро свяжется с вами для подтверждения.</p>
+        <button class="success-close-btn" id="successCloseBtn">Отлично</button>
+    </div>
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/site.js"></script>
+<script src="menu-api.js"></script>
+<script src="floating-cart.js"></script>
+<script src="cart.js"></script>
+
+<script src="../global_style/velora-modal-card.js"></script>
+<script src="../global_style/orders.js"></script>
+</body>
+</html>

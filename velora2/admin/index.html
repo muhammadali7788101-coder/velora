@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Velora — Админка</title>
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<div id="login" class="login hidden">
+  <form id="loginForm" class="login-box">
+    <div class="logo">Velora<span>admin</span></div>
+    <input id="pass" type="password" placeholder="Пароль" aria-label="Пароль администратора" autocomplete="current-password" required autofocus>
+    <button class="btn primary" type="submit">Войти</button>
+    <p id="loginErr" class="err"></p>
+  </form>
+      <p class="mut" style="font-size:12px;line-height:1.5">Демонстрационный вход на стороне браузера. Он не является защитой API.</p>
+</div>
+
+<div id="app" class="app hidden">
+  <aside class="side">
+    <div class="logo">Velora<span>admin</span></div>
+    <nav id="nav">
+      <a data-tab="dash" class="active"><i class="fa-solid fa-chart-simple"></i>Обзор</a>
+      <a data-tab="menu"><i class="fa-solid fa-utensils"></i>Блюда</a>
+      <a data-tab="orders"><i class="fa-solid fa-bag-shopping"></i>Заказы <b id="bOrders"></b></a>
+      <a data-tab="reserve"><i class="fa-solid fa-calendar-check"></i>Брони <b id="bReserve"></b></a>
+      <a data-tab="messages"><i class="fa-solid fa-envelope"></i>Сообщения</a>
+    </nav>
+    <button id="logout" class="btn ghost"><i class="fa-solid fa-right-from-bracket"></i> Выйти</button>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <h1 id="title">Обзор</h1>
+      <div class="top-r"><input id="search" placeholder="Поиск…"><button id="refresh" class="btn ghost" title="Обновить"><i class="fa-solid fa-rotate"></i></button></div>
+    </header>
+    <section id="view"></section>
+  </main>
+</div>
+
+<div id="modal" class="modal hidden"><div class="modal-box" id="modalBox"></div></div>
+<div id="toast" class="toast"></div>
+<script src="../js/config.js"></script>
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

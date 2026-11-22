@@ -1,0 +1,148 @@
+
+
+.about-story {
+    padding: 90px 0;
+    background: #080b0e;
+    color: #f1e9df;
+}
+
+.about-story-container {
+    width: 86%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+
+.about-story-image {
+    position: relative;
+    min-width: 0;
+    height: 360px; 
+    border: 1px solid rgba(201, 157, 91, 0.45);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.about-story-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.about-story-image:hover img {
+    transform: scale(1.03);
+}
+
+
+.about-story-content {
+    min-width: 0;
+}
+
+.about-story-label {
+    display: inline-block;
+    margin-bottom: 16px;
+
+    color: #cda66e;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.about-story-content h2 {
+    margin: 0 0 22px;
+
+    color: #f2e9dd;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 3.5vw, 46px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.about-story-content h2 span {
+    color: #d4ae78;
+    font-style: italic;
+}
+
+.about-story-content > p {
+    margin: 0 0 18px;
+
+    color: #aaa69f;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+
+.about-story-signature {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 30px;
+}
+
+.about-story-signature > span {
+    display: block;
+    width: 45px;
+    height: 1px;
+
+    background: #cda66e;
+}
+
+.about-story-signature p {
+    margin: 0;
+
+    color: #d4ae78;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-style: italic;
+    letter-spacing: 0.3px;
+}
+
+
+@media (max-width: 900px) {
+    .about-story {
+        padding: 65px 0;
+    }
+
+    .about-story-container {
+        width: 90%;
+        gap: 40px;
+    }
+
+    .about-story-image {
+        height: 380px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .about-story {
+        padding: 50px 0;
+    }
+
+    .about-story-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-story-image {
+        height: 300px;
+    }
+
+    .about-story-content h2 {
+        font-size: 30px;
+    }
+
+    .about-story-content > p {
+        font-size: 13px;
+    }
+}
